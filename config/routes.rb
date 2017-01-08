@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  root 'pages#index'
+  # devise_for :users
+  resources :properties
+  resources :buying_criteria
+  get "index" => "pages#index"
+  get "privacy" => "pages#privacy"
+  get "faq" => "pages#faq"
+  get "my_account" => "pages#my_account"
+  get "new_data_choice" => "pages#new_data_choice"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
