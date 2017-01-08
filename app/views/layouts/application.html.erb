@@ -7,12 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<%= render 'layouts/header' %>
 	<!-- insert header here -->
 	<!-- insert main beginning here -->
-<%= yield %>
+	<%= yield %>
 	<!-- insert main ending here -->
 	<!-- insert footer here -->
+	<%= render 'layouts/footer' %>
+
+	<!-- Owned by Virgo Ventures LLC | VirgoVentures.org -->
 
 </body>
 </html>
