@@ -1,0 +1,58 @@
+/* css styles in sass format */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 5px 15px;
+	overflow: hidden;
+	height: 50px;
+	background: #303030;
+	color: #ddd;
+	width: 100%;
+	#brand {
+		max-width: 100px;
+		font-size: 24px;
+	}
+	a {
+		color: #ddd;
+		text-decoration: none;
+	}
+	a:hover {
+		color: white;
+	}
+	#main-navigation {
+		position: fixed;
+		top: 0;
+		right: 0;
+		ul li {
+			list-style: none;
+			float: left;
+			padding: 10px;
+		}
+		ul li:hover {
+			color: white;
+		}
+	}
+}
+
+main {
+	position: relative;
+	top: 50px;
+	left: 0px;
+}
+
+footer {
+	background: #303030;
+	position: relative;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	padding: 30px;
+	color: #ddd;
+	text-align: center;
+	:hover {
+		color: white;
+	}
+
+}
