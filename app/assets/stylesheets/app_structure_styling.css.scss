@@ -33,8 +33,32 @@ header {
 		ul li:hover {
 			color: white;
 		}
+	} /* end #main-navigation all screen sizes */
+}
+
+/*below is to get main navigation to collapse on all screen sizes*/
+@media only screen and (max-width: 767px) {
+	#main-navigation {
+		#brand {
+
+		}
+		position: fixed !important;
+		ul {
+			position: fixed;
+			right: 0;
+			top: 0;
+			margin-right: 15px;
+			li {
+				display: inline;
+				width: 100%;
+				color: #ddd;
+				text-align: right;
+				background: #303030;
+			}
+		}
 	}
 }
+
 
 main {
 	position: relative;
@@ -58,6 +82,10 @@ footer {
 	a {
 		color: #ddd;
 		text-decoration: none;
+	}
+	a:hover {
+		color: white;
+		transform: ease-in 0.1s;
 	}
 
 }
