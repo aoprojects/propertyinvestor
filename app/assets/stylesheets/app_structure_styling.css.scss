@@ -51,8 +51,13 @@ footer {
 	padding: 30px;
 	color: #ddd;
 	text-align: center;
-	:hover {
+	span:hover {
 		color: white;
+		transform: ease-in 0.1s;
+	}
+	a {
+		color: #ddd;
+		text-decoration: none;
 	}
 
 }
