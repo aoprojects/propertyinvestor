@@ -152,18 +152,6 @@
 					</div><!-- end .field -->
 				</div><!-- end .col-sm-6 -->	
 
-				<!-- property deal type field -->
-				<div class="col-sm-6 text-center">
-					<div class="field">
-						<span class="field-label">
-							<%= p.label :Type_of_deal %>
-						</span>
-						<span class="field-input-area">
-							<%= p.text_field :deal_type, class: 'form-control', placeholder: "As is, Turn key, rent ready Wholesale" %>
-						</span><!-- end .field-input-area -->
-					</div><!-- end .field -->
-				</div><!-- end .col-sm-6 -->
-
 				<!-- property property description field -->
 				<div class="col-sm-6 text-center">
 					<div class="field">
@@ -173,6 +161,35 @@
 						</span>
 						<span class="field-input-area">
 							<%= p.text_field :property_description, class: 'form-control', placeholder: "Ranch 2 bed, 2 bath, with pool and 2 car garage." %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property features field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Specific_features_of_property %>
+							<small>This should be profit minus all basic deal expenses.</small>
+						</span>
+						<span class="field-input-area">
+							<%= p.number_field :property_features, class: 'form-control', placeholder: "Pool, 2 car driveway, HOA, next to school, close to public transit, no on main road." %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->								
+
+			</section><!-- end #property-other-details -->
+
+			<section id="deal-details">
+
+				<!-- property deal type field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Type_of_deal %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :deal_type, class: 'form-control', placeholder: "As is, Turn key, rent ready Wholesale" %>
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
 				</div><!-- end .col-sm-6 -->
@@ -187,7 +204,7 @@
 							<%= p.text_field :deal_urgency, class: 'form-control', placeholder: "Must close by April 10th" %>
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
-				</div><!-- end .col-sm-6 -->
+				</div><!-- end .col-sm-6 -->	
 
 				<!-- property current value field -->
 				<div class="col-sm-6 text-center">
@@ -200,7 +217,7 @@
 							<%= p.text_field :property_current_value, class: 'form-control', placeholder: "415,000" %>
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
-				</div><!-- end .col-sm-6 -->				
+				</div><!-- end .col-sm-6 -->			
 
 				<!-- property estimated ARV field -->
 				<div class="col-sm-6 text-center">
@@ -243,6 +260,31 @@
 					</div><!-- end .field -->
 				</div><!-- end .col-sm-6 -->
 
+				<!-- property estimated profit field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Estimated_profit %>
+							<small>This should be profit minus all basic deal expenses.</small>
+						</span>
+						<span class="field-input-area">
+							<%= p.number_field :estimated_profit, class: 'form-control', placeholder: "110,000" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->		
+
+				<!-- property financial calculations field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Financial_calculations %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_area :financial_calculations, class: 'form-control', placeholder: "Optional: Use this space to show in hard numbers out how you arrived at the profit amount." %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->				
+
 				<!-- property additional deal details field -->
 				<div class="col-sm-6 text-center">
 					<div class="field">
@@ -255,12 +297,7 @@
 					</div><!-- end .field -->
 				</div><!-- end .col-sm-6 -->
 
-
-			</section>		
-
-			<section id="deal-details">
-				deal details TODO
-			</section>				
+			</section><!-- end #deal-details -->		
 
 		</div><!-- end .row -->
 

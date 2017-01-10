@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170110162339) do
     t.string   "address_city"
     t.string   "address_us_state"
     t.integer  "address_us_zipcode"
+    t.boolean  "off_market"
     t.integer  "property_finished_sf"
     t.integer  "property_land_sf"
     t.string   "property_condition"
@@ -32,7 +33,9 @@ ActiveRecord::Schema.define(version: 20170110162339) do
     t.boolean  "deal_repair_estimate"
     t.text     "property_description"
     t.text     "deal_additional_details"
-    t.boolean  "off_market"
+    t.text     "financial_calculations"
+    t.integer  "estimated_profit"
+    t.text     "property_features"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
