@@ -21,6 +21,9 @@ header {
 	a:hover {
 		color: white;
 	}
+	#hamburger {
+		display: none;
+	}
 	#main-navigation {
 		position: fixed;
 		top: 0;
@@ -43,17 +46,26 @@ header {
 
 		}
 		position: fixed !important;
+		#hamburger {
+			display: inline-block;
+			position: fixed;
+			top: 0;
+			right: 0;
+			padding: 30px;
+			color: #ddd;
+			z-index: 12;
+		}
 		ul {
 			position: fixed;
 			right: 0;
-			top: 0;
-			margin-right: 15px;
+			top: 70;
+			width: 100%;
 			li {
 				display: inline;
 				width: 100%;
 				color: #ddd;
 				text-align: right;
-				background: #303030;
+				background: #303030;			
 			}
 		}
 	}
