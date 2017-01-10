@@ -1,1 +1,12 @@
-my_account.html.erb
+<!-- the below displays the subtitle for the page title tag -->
+<% content_for(:subtitle) do %>My Account<% end %>
+<!-- end page specific subtitle area -->
+
+<h1>My Account</h1>
+
+<p>TODO insert account details here</p>
+
+<section class="button-opetions-area">
+	<button class="btn btn-warning btn-md">Sign Out</button><br>
+	<button class="btn btn-danger btn-md">Delete Account</button>
+</section><!-- end .button-options-area -->
