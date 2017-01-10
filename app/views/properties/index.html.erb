@@ -2,4 +2,11 @@
 <% content_for(:subtitle) do %>Properties<% end %>
 <!-- end page specific subtitle area -->
 
-index.html.erb
+<% @property.each do |p| %>
+
+	<div class="property-preview">
+		<%= p.deal_title %><br>
+		<%= p.address_city %>
+	</div><!-- end .property-preview -->
+
+<% end %><!-- end all properties ruby block -->

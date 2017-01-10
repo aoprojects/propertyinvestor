@@ -2,7 +2,16 @@
 <% content_for(:subtitle) do %>Property Details<% end %>
 <!-- end page specific subtitle area -->
 
+<h1>Property Details</h1>
 
-show.html.erb
+<% @property do |p| %>
+	
+	<%= p.deal_title %>
+	
+	<div class="property-details">
+		<%= p.address_city %>
+	</div>
+
+<% end %><!-- end .each property details ruby block -->
 
 

@@ -14,8 +14,10 @@
 ActiveRecord::Schema.define(version: 20170110162339) do
 
   create_table "properties", force: :cascade do |t|
-    t.string   "address_unit"
-    t.string   "address_street"
+    t.string   "deal_title"
+    t.string   "address_street_number"
+    t.string   "address_street_name"
+    t.string   "address_unit_number"
     t.string   "address_city"
     t.string   "address_us_state"
     t.integer  "address_us_zipcode"
@@ -28,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170110162339) do
     t.integer  "property_estimated_arv"
     t.integer  "property_renovations_needed"
     t.boolean  "deal_repair_estimate"
-    t.text     "proeprty_description"
+    t.text     "property_description"
     t.text     "deal_additional_details"
     t.boolean  "off_market"
     t.datetime "created_at",                  null: false

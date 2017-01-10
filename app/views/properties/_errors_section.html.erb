@@ -1,0 +1,12 @@
+		<!-- begin if any property errors -->
+		<% if @property.errors.any? %>
+			<div id="error-explanation">
+				<p>Please edit the <%= pluralize(@property.errors.count, "error") %> below...</p>
+				<ul>
+					<% @property.errors.full_messages.each do |message| %>
+						<li><%= message %></li>
+					<% end %><!-- end full error messages -->
+				</ul>
+			</div><!-- #error-explanation -->
+		<% end %>
+		<!-- end if any errors saving, creating, editing property model -->

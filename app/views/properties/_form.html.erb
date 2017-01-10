@@ -1,0 +1,149 @@
+<section id="property-form">
+	<p>We are currently only adding properties located in the US. <br>Stay tuned... Our programming team is working to add more locations.</p>
+	
+	<%= form_for(@property) do |p| %>
+		<!-- begin if any property errors -->
+			<!-- todo will render partial for form errors -->
+		<!-- end if any errors saving, creating, editing property model -->
+		<div class="row">
+
+			<h2 id="property-deal-title" class="text-center">
+				<!-- deal title field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Deal_title %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :deal_title, class: 'form-control', placeholder: "eg. Wholesale deal Seattle - 45k profit" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+			</h2><!-- end property-deal-title -->
+
+			<section id="#property-address-details">
+				<!-- property address unit field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Street_number %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :address_street_number, class: 'form-control', placeholder: "123" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property street field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Street_name %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :address_street_name, class: 'form-control', placeholder: "Main Street" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property unit number field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Unit_number %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :address_unit_number, class: 'form-control', placeholder: "Apartment 2" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property city field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :City %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :address_city, class: 'form-control', placeholder: "Property's City" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property state field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :State %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :address_us_state, class: 'form-control', placeholder: "Property's City" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property zipcode field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Zipcode %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :address_us_zipcode, class: 'form-control', placeholder: "Property's City" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->	
+
+			</section><!-- end #property-address-details -->	
+			<section id="deal-details">
+
+				<!-- property city field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Zipcode %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :address_us_zipcode, class: 'form-control', placeholder: "Property's City" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->	
+
+
+
+			</section>						
+
+
+
+
+
+
+
+
+		</div><!-- end .row -->
+
+		<div class="action-button">
+			<%= p.submit class: 'btn btn-primary btn-lg' %>
+		</div><!-- end .action-button -->
+
+	<% end %><!-- end form for property -->
+</section><!-- end #property-form -->
+
+
+
+    t.string   "address_us_state"
+    t.integer  "address_us_zipcode"
+    t.integer  "property_finished_sf"
+    t.integer  "property_land_sf"
+    t.string   "property_condition"
+    t.string   "deal_type"
+    t.string   "deal_urgency"
+    t.integer  "property_current_value"
+    t.integer  "property_estimated_arv"
+    t.integer  "property_renovations_needed"
+    t.boolean  "deal_repair_estimate"
+    t.text     "property_description"
+    t.text     "deal_additional_details"
+    t.boolean  "off_market"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",
