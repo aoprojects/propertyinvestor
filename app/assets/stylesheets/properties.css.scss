@@ -6,7 +6,7 @@
 }
 
 #property-deal-title {
-	
+	text-align: center;
 }
 
 .property-all-info {
@@ -19,4 +19,11 @@
 
 #property-other-details {
 
+}
+
+#property-form {
+	section {
+		border: 1px solid red;
+		padding: 20px;
+	}
 }

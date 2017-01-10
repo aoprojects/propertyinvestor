@@ -1,5 +1,5 @@
 <section id="property-form">
-	<p>We are currently only adding properties located in the US. <br>Stay tuned... Our programming team is working to add more locations.</p>
+	<small>We are currently only adding properties located in the US. <br>Stay tuned... Our programming team is working to add more locations.</small>
 
 	<%= form_for(@property) do |p| %>
 		<!-- begin if any property errors -->
@@ -22,6 +22,9 @@
 			</h2><!-- end property-deal-title -->
 
 			<section id="property-address-details">
+
+				<h3>Property Address</h3>
+
 				<!-- property address unit field -->
 				<div class="col-sm-6 text-center">
 					<div class="field">
@@ -98,6 +101,8 @@
 
 			<section id="property-other-details">
 
+				<h3>General Property Details</h3>
+
 				<!-- property off market or not field -->
 				<div class="col-sm-6 text-center">
 					<div class="field">
@@ -109,11 +114,7 @@
 							<!-- todo transformt this into only numbers -->
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
-				</div><!-- end .col-sm-6 -->
-
-
-
-			<section id="property-other-details">
+				</div><!-- end .col-sm-6 -->				
 
 				<!-- property finished sf field -->
 				<div class="col-sm-6 text-center">
@@ -181,6 +182,8 @@
 			</section><!-- end #property-other-details -->
 
 			<section id="deal-details">
+
+				<h3>Deal Details</h3>
 
 				<!-- property deal type field -->
 				<div class="col-sm-6 text-center">
