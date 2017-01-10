@@ -4,14 +4,39 @@
 
 <h1>Property Details</h1>
 
-<% @property do |p| %>
-	
-	<%= p.deal_title %>
-	
-	<div class="property-details">
-		<%= p.address_city %>
-	</div>
+<section class="property-all-info">
 
-<% end %><!-- end .each property details ruby block -->
+	<% @property do |p| %>
+
+		<div id="property-deal-title">
+			<%= p.deal_title %>
+		</div>
+
+		<section id="deal-details">
+			deal details
+		</section>
+
+		<section id="property-address-details">
+			<%= p.address_city %>
+		</section>
+
+		<section class="property-other-details">
+			property other details
+		</section>
+
+	<% end %><!-- end .each property details ruby block -->
+
+</section><!-- end .property-all-info -->
 
 
+
+  
+
+
+
+    t.boolean  "off_market"
+
+
+    financial calculations
+    estimated profit
+    add property_features - text area

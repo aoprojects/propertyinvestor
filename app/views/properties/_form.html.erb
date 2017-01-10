@@ -1,6 +1,6 @@
 <section id="property-form">
 	<p>We are currently only adding properties located in the US. <br>Stay tuned... Our programming team is working to add more locations.</p>
-	
+
 	<%= form_for(@property) do |p| %>
 		<!-- begin if any property errors -->
 			<!-- todo will render partial for form errors -->
@@ -21,7 +21,7 @@
 				</div><!-- end .col-sm-6 -->
 			</h2><!-- end property-deal-title -->
 
-			<section id="#property-address-details">
+			<section id="property-address-details">
 				<!-- property address unit field -->
 				<div class="col-sm-6 text-center">
 					<div class="field">
@@ -95,30 +95,172 @@
 				</div><!-- end .col-sm-6 -->	
 
 			</section><!-- end #property-address-details -->	
-			<section id="deal-details">
 
-				<!-- property city field -->
+			<section id="property-other-details">
+
+				<!-- property off market or not field -->
 				<div class="col-sm-6 text-center">
 					<div class="field">
 						<span class="field-label">
-							<%= p.label :Zipcode %>
+							<%= p.label :Off_market %>
 						</span>
 						<span class="field-input-area">
-							<%= p.text_field :address_us_zipcode, class: 'form-control', placeholder: "Property's City" %>
+							<%= p.check_box :off_market, class: 'form-control' %>
+							<!-- todo transformt this into only numbers -->
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+
+
+			<section id="property-other-details">
+
+				<!-- property finished sf field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Finished_square_feet %>
+						</span>
+						<span class="field-input-area">
+							<%= p.number_field :property_finished_sf, class: 'form-control', placeholder: "750" %>
+							<!-- todo transformt this into only numbers -->
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
 				</div><!-- end .col-sm-6 -->	
 
+				<!-- property lot sf field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Lot_square_feet %>
+						</span>
+						<span class="field-input-area">
+							<%= p.number_field :property_land_sf, class: 'form-control', placeholder: "900" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->	
+
+				<!-- property condition field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Condition_of_property %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :property_condition, class: 'form-control', placeholder: "Rent-ready, not fancy." %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->	
+
+				<!-- property deal type field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Type_of_deal %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :deal_type, class: 'form-control', placeholder: "As is, Turn key, rent ready Wholesale" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property property description field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<!-- todo change this to be a text area, not text field. More description allowed. Also let them edit like in markdown -->
+						<span class="field-label">
+							<%= p.label :Property_description %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :property_description, class: 'form-control', placeholder: "Ranch 2 bed, 2 bath, with pool and 2 car garage." %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property deal urgency field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Urgency_of_deal %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :deal_urgency, class: 'form-control', placeholder: "Must close by April 10th" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property current value field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Current_property_value %>
+							<small>All currency is in USD</small>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :property_current_value, class: 'form-control', placeholder: "415,000" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->				
+
+				<!-- property estimated ARV field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Estimated_ARV %>
+							<small>All currency is in USD</small><br>
+							<small>ARV = After Repair Value of recommended deal type</small>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :property_estimated_arv, class: 'form-control', placeholder: "550,000" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property renovations needed field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Renovations_needed %>
+							<small>All currency is in USD</small>
+						</span>
+						<span class="field-input-area">
+							<%= p.number_field :property_renovations_needed, class: 'form-control', placeholder: "30,000" %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- deal repair estimate attachment field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<!-- todo let them attach repair estimates as PDFs -->
+						<span class="field-label">
+							<%= p.label :TODO_Repair_estimate %>
+							<small>All currency is in USD</small>
+						</span>
+						<span class="field-input-area">
+							<%= p.check_box :deal_repair_estimate, class: 'form-control' %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
+
+				<!-- property additional deal details field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Anything_else_worth_mentioning %>
+						</span>
+						<span class="field-input-area">
+							<%= p.text_field :deal_additional_details, class: 'form-control', placeholder: "In an age-regulated HOA community, over 55 years required primary resident." %>
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->
 
 
-			</section>						
+			</section>		
 
-
-
-
-
-
-
+			<section id="deal-details">
+				deal details TODO
+			</section>				
 
 		</div><!-- end .row -->
 
@@ -128,22 +270,3 @@
 
 	<% end %><!-- end form for property -->
 </section><!-- end #property-form -->
-
-
-
-    t.string   "address_us_state"
-    t.integer  "address_us_zipcode"
-    t.integer  "property_finished_sf"
-    t.integer  "property_land_sf"
-    t.string   "property_condition"
-    t.string   "deal_type"
-    t.string   "deal_urgency"
-    t.integer  "property_current_value"
-    t.integer  "property_estimated_arv"
-    t.integer  "property_renovations_needed"
-    t.boolean  "deal_repair_estimate"
-    t.text     "property_description"
-    t.text     "deal_additional_details"
-    t.boolean  "off_market"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",
