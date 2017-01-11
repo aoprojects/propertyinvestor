@@ -2,7 +2,12 @@
 <header>
 	<div class="container">
 
-		<p id="logo-brand"><%= link_to 'Property Investor', root_path %></p>
+		<p id="nav-brand">
+			<%= link_to root_path do %>
+				<%= image_tag('PropertyInvestor_logo.png', id: "logo-nav") %>
+				&nbsp;<span id="brand">Property&nbsp;Investor</span>
+			<% end %>
+		</p>
 		<div id="hamburger">
 			<%= fa_icon "bars" %>
 		</div><!-- end #hamburger -->

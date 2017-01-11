@@ -1,7 +1,10 @@
 /*insert common element styling below*/
 
-.logo-tiny {
 
+.logo-tiny img {
+	max-width: 80px;
+	margin: 0 auto;
+	padding: 0px;
 }
 
 .logo-medium {
@@ -10,6 +13,21 @@
 
 .logo-large {
 
+}
+
+
+#nav-brand {
+	#brand {
+		position: relative;
+		top: -25px;
+		left: 0px;
+	}
+	#logo-nav {
+		position: relative;
+		top: -14px;
+		left: -2px;
+		max-width: 45px;
+	}
 }
 
 .social-icon {
