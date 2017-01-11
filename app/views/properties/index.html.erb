@@ -1,12 +1,29 @@
-<!-- the below displays the subtitle for the page title tag -->
+the below displays the subtitle for the page title tag -->
 <% content_for(:subtitle) do %>Properties<% end %>
 <!-- end page specific subtitle area -->
 
-<% @property.each do |p| %>
+<% if @properties.any? %>
+	
+	<% @properties.each do |p| %>
 
-	<div class="property-preview">
-		<%= p.deal_title %><br>
-		<%= p.address_city %>
-	</div><!-- end .property-preview -->
+		<div class="property-preview">
+			<%= p.deal_title %><br>
+			<%= p.address_city %>
+		</div><!-- end .property-preview -->
 
-<% end %><!-- end all properties ruby block -->
+	<% end %><!-- end all properties ruby block -->
+
+<% else %>
+
+	<div class="no-content-yet">
+		<p>No properties are listed yet.</p>
+		<button>List a property</button><br>
+		 or if you'd like to be contacted when a proeprty fits your buying criteria, you can<br>
+		 <button>Create a Property Alert TODO</button>
+
+		 <!-- displays today's day of the week -->
+		 <p>Have a happy <%= Date.today.strftime("%A") %></p>
+
+	</div><!-- no content yet -->
+
+<% end %><!-- end if properties exist or not block
