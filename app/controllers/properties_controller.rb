@@ -6,6 +6,7 @@ class PropertiesController < ApplicationController
 	end
 
 	def show
+		@property
 	end
 
 	def new

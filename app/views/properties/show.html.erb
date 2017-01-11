@@ -1,4 +1,4 @@
-<!-- the below displays the subtitle for the page title tag -->
+the below displays the subtitle for the page title tag -->
 <% content_for(:subtitle) do %>Property Details<% end %>
 <!-- end page specific subtitle area -->
 
@@ -9,21 +9,56 @@
 	<% @property do |p| %>
 
 		<div id="property-deal-title">
-			<%= p.deal_title %>
+			<h2><%= p.deal_title %></h2>
+			<p>todo insert scrolling images of property</p>
 		</div>
+		<!-- todo this section should be to the right of the previous section on desktop -->
+		<section id="property-address-details">
 
-		<section id="deal-details">
-			deal details
+			<h3>Property Address</h3>
+
+			<p class="property-address">
+				<%= p.address_street_number %>&nbsp;<%= p.address_street_name %>
+				<br>Unit<%= p.address_unit_number %>
+				<br><%= p.address_city %>,&nbsp;<%= p.address_us_state %>&nbsp;<%= p.address_us_zipcode %>
+			</p>
+
 		</section>
 
-		<section id="property-address-details">
-			<%= p.address_city %>
+		<section id="deal-details">
+			<h3>Deal Details</h3>
+			<ul>
+				<li><%= p.try(:deal_type) %></li>
+				<li><%= p.try(:deal_urgency) %></li>
+				<li><%= p.try(:property_current_value) %></li>
+				<li><%= p.try(:deal_type) %></li>
+				<li><%= p.try(:property_estimated_arv) %></li>
+				<li><%= p.try(:property_renovations_needed) %></li>
+				<li><%= p.try(:deal_repair_estimate) %></li>
+				<li><%= p.try(:estimated_profit) %></li>
+				<li><%= p.try(:financial_calculations) %></li>
+				<li><%= p.try(:deal_additional_details) %></li>
+			</ul>
+
 		</section>
 
 		<section class="property-other-details">
-			property other details
+
+			<h3>General Property Details</h3>
+
+			<ul>
+				<li><%= p.try(:off_market) %></li>
+				<li><%= p.try(:property_finished_sf) %></li>
+				<li><%= p.try(:property_land_sf) %></li>
+				<li><%= p.try(:property_condition) %></li>
+				<li><%= p.try(:property_description) %></li>
+				<li><%= p.try(:property_features) %></li>
+			</ul>
+
 		</section>
 
-	<% end %><!-- end .each property details ruby block -->
+	<% end %><!-- end per property do block -->
 
-</section><!-- end .property-all-info -->
+	<p class="text-right">TOOD Report this listing as misleading or inappropriate.</p>
+
+</section><!-- end .property-all-info
