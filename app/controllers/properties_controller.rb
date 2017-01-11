@@ -6,7 +6,7 @@ class PropertiesController < ApplicationController
 	end
 
 	def show
-		@property
+		# we shouldn't need anything here because the before action is finding the post
 	end
 
 	def new
@@ -27,9 +27,16 @@ class PropertiesController < ApplicationController
 	end
 
 	def update
+		if @property.update property_params
+			redirect_to @property, notice: "Your property was successfully updated."
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
+		@property.destroy
+		redirect_to properties_path
 	end
 
 

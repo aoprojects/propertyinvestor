@@ -145,7 +145,7 @@
 				<div class="col-sm-6 text-center">
 					<div class="field">
 						<span class="field-label">
-							<%= p.label :Condition_of_property %>
+							<%= p.label :Condition_of_property, content: "What condition is this property currently in?" %>
 						</span>
 						<span class="field-input-area">
 							<%= p.text_field :property_condition, class: 'form-control', placeholder: "Rent-ready, not fancy." %>
@@ -217,7 +217,7 @@
 							<small>All currency is in USD</small>
 						</span>
 						<span class="field-input-area">
-							<%= p.text_field :property_current_value, class: 'form-control', placeholder: "415,000" %>
+							<%= p.number_field :property_current_value, class: 'form-control', placeholder: "415,000" %>
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
 				</div><!-- end .col-sm-6 -->			
@@ -231,7 +231,7 @@
 							<small>ARV = After Repair Value of recommended deal type</small>
 						</span>
 						<span class="field-input-area">
-							<%= p.text_field :property_estimated_arv, class: 'form-control', placeholder: "550,000" %>
+							<%= p.number_field :property_estimated_arv, class: 'form-control', placeholder: "550,000" %>
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
 				</div><!-- end .col-sm-6 -->

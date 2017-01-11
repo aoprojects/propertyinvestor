@@ -57,6 +57,14 @@ the below displays the subtitle for the page title tag -->
 
 		</section>
 
+		<button class="btn btn-success btn-lg text-center">Contact Property Representative</button>
+
+		<!-- if current_user is @property.user -->
+		<div class="action-area">
+			<%= link_to "Edit This Property", edit_property_path(@property) %><br>
+			<%= link_to "Delelete This Property", property_path(@property), method: :delete, data: {confirm: "Are you sure you want to delete this property?"} %>
+		</div><!-- end .action-area -->
+
 	<% end %><!-- end per property do block -->
 
 	<p class="text-right">TOOD Report this listing as misleading or inappropriate.</p>
