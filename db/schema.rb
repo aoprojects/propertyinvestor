@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110162339) do
+ActiveRecord::Schema.define(version: 20170112201939) do
 
   create_table "properties", force: :cascade do |t|
     t.string   "deal_title"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170110162339) do
     t.text     "property_features"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.boolean  "under_direct_contract"
   end
 
 end
