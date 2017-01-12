@@ -114,7 +114,21 @@
 							<!-- todo transformt this into only numbers -->
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
-				</div><!-- end .col-sm-6 -->				
+				</div><!-- end .col-sm-6 -->
+
+				<!-- TODO if off market -->
+				<!-- property off market or not field -->
+				<div class="col-sm-6 text-center">
+					<div class="field">
+						<span class="field-label">
+							<%= p.label :Under_direct_contract, content: "Do you or your company have this property under contract yourself?" %>
+						</span>
+						<span class="field-input-area">
+							<%= p.check_box :under_direct_contract, class: 'form-control' %>
+							<!-- todo transformt this into only numbers -->
+						</span><!-- end .field-input-area -->
+					</div><!-- end .field -->
+				</div><!-- end .col-sm-6 -->								
 
 				<!-- property finished sf field -->
 				<div class="col-sm-6 text-center">

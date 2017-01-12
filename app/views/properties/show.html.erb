@@ -48,6 +48,7 @@ the below displays the subtitle for the page title tag -->
 
 			<ul>
 				<li><%= p.try(:off_market) %></li>
+				<li><%= p.try(:under_direct_contract) %></li>
 				<li><%= p.try(:property_finished_sf) %></li>
 				<li><%= p.try(:property_land_sf) %></li>
 				<li><%= p.try(:property_condition) %></li>
