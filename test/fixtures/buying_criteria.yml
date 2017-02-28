@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  criteria_nickname: MyString
+  address_street_number: MyString
+  address_street_name: MyString
+  address_unit_number: MyString
+  address_city: MyString
+  address_us_state: MyString
+  address_us_zipcode: MyString
+  off_market: false
+  property_finished_sf_min: 1
+  property_finished_sf_max: 1
+  property_land_sf_min: 1
+  property_land_sf_max: 1
+  property_condition: MyString
+  deal_type: MyString
+  deal_urgency: MyString
+  property_current_value_min: 1
+  property_current_value_max: 1
+  property_estimated_arv_min: 1
+  property_estimated_value_max: 1
+  property_renovations_needed_min: 1
+  property_renovations_needed_max: 1
+  deal_repair_estimate: false
+  property_description_keywords: MyString
+  deal_estimated_profit_min: 1
+  property_features_keywords: MyString
+  under_direct_contract: false
+
+two:
+  criteria_nickname: MyString
+  address_street_number: MyString
+  address_street_name: MyString
+  address_unit_number: MyString
+  address_city: MyString
+  address_us_state: MyString
+  address_us_zipcode: MyString
+  off_market: false
+  property_finished_sf_min: 1
+  property_finished_sf_max: 1
+  property_land_sf_min: 1
+  property_land_sf_max: 1
+  property_condition: MyString
+  deal_type: MyString
+  deal_urgency: MyString
+  property_current_value_min: 1
+  property_current_value_max: 1
+  property_estimated_arv_min: 1
+  property_estimated_value_max: 1
+  property_renovations_needed_min: 1
+  property_renovations_needed_max: 1
+  deal_repair_estimate: false
+  property_description_keywords: MyString
+  deal_estimated_profit_min: 1
+  property_features_keywords: MyString
+  under_direct_contract: false
