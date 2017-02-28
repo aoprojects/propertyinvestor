@@ -1,12 +1,14 @@
 class BuyingCriteriaController < ApplicationController
 
 	def index
+		@buying_criteria = BuyingCriterium.all
 	end
 
 	def show
 	end
 
 	def new
+		@buying_criteria = BuyingCriterium.new
 	end
 
 	def create

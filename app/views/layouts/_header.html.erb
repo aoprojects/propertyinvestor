@@ -15,7 +15,7 @@
 		<nav id="main-navigation">
 			<ul>
 				<li><%= link_to 'Post a Property', new_property_path %></li>
-				<li><%= link_to 'Search Properties', properties_path %></li>
+				<li><%= link_to 'Search Properties', new_buying_criterium_path %></li>
 				<% if user_signed_in? %>
 					<li><%= link_to 'My Account', my_account_path %></li>
 					<li><%= link_to 'Sign Out', destroy_user_session_path %></li>
