@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "index" => "pages#index"
   get "privacy" => "pages#privacy"
   get "faq" => "pages#faq"
+  get "contact" => "pages#contact"
   get "my_account" => "pages#my_account"
   get "new_data_choice" => "pages#new_data_choice"
 

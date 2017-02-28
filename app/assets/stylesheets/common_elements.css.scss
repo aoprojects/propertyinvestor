@@ -1,5 +1,9 @@
 /*insert common element styling below*/
 
+h1 {
+	text-align: center;
+}
+
 
 .logo-tiny img {
 	max-width: 80px;
@@ -13,6 +17,16 @@
 
 .logo-large {
 
+}
+
+main {
+	padding: 35px;
+}
+
+.social-media-container-dark a {
+	color: black;
+	text-decoration: none;
+	list-style: none;
 }
 
 // below is for nav brand area on upper left of nav, links to root_path

@@ -14,4 +14,7 @@ class PagesController < ApplicationController
   def new_data_choice
   end
 
+  def contact
+  end
+
 end

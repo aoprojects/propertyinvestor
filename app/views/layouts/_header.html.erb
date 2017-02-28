@@ -16,11 +16,12 @@
 			<ul>
 				<li><%= link_to 'Post a Property', new_property_path %></li>
 				<li><%= link_to 'Search Properties', properties_path %></li>
-				<li><%= link_to 'My Account', my_account_path %></li>
-				<!-- todo if user not signed in -->
-				<li><%= link_to 'Log In | Create Account', new_user_registration_path %></li>
-				<!-- todo if user signed in  -->
-				<li><%= link_to 'Sign Out', destroy_user_session_path %></li>
+				<% if user_signed_in? %>
+					<li><%= link_to 'My Account', my_account_path %></li>
+					<li><%= link_to 'Sign Out', destroy_user_session_path %></li>
+				<% else %>
+					<li><%= link_to 'Log In | Create Account', new_user_registration_path %></li>
+				<% end %>
 			</ul>
 		</nav>
 
