@@ -1,4 +1,5 @@
 /*stylesheet for actions under the pages controller*/
+$brand-color: green;
 
 #faq-section {
 	padding: 40px;
@@ -14,5 +15,6 @@
 	}
 	.question {
 		font-weight: bold;
+		color: $brand-color;
 	}
 }
