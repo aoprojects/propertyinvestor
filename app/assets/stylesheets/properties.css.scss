@@ -3,6 +3,7 @@
 .property-preview {
 	border: 1px solid red;
 	padding: 20px;
+	background-color: #eee;
 }
 
 #property-deal-title {
@@ -22,8 +23,13 @@
 }
 
 #property-form {
+	width: 100%;
 	section {
-		border: 1px solid red;
+		/*border: 1px solid red;*/
 		padding: 20px;
+		width: 100%;
+	}
+	section:nth-child(2n) {
+		background-color: #eee;
 	}
 }

@@ -4,14 +4,18 @@ $brand-color: green;
 body {
 	font-family: Arial;
 	font-weight: 300;
+	padding: 0;
+	margin: 0;
 }
-
 h1 {
 	text-align: center;
 	font-family: Arial;
 	font-weight: 300;
 }
-
+h3 {
+	font-size: 24px;
+	text-align: center;
+}
 .field-label {
 	color: $brand-color;
 	padding: 10px;
@@ -22,11 +26,8 @@ h1 {
 	/*border-bottom: 1px solid $brand-color;*/
 }
 
-.note {
-	text-align: right;
-}
-
 input {
+	text-align: center;
 	box-shadow: none;
 	padding: 10px;
 	margin: 10px;
@@ -37,6 +38,7 @@ input {
 	border-right: none;
 	border-left: none;
 	border-bottom: 1px solid $brand-color;
+	background: transparent;
 }
 
 input:hover, input:active, input:focus {
@@ -52,6 +54,9 @@ input:hover, input:active, input:focus {
 	color: $brand-color;
 	transition: 0.1s ease-in;
 }
+label:after {
+	content: ":";
+}
 
 .logo-tiny img {
 	max-width: 80px;
@@ -66,9 +71,23 @@ input:hover, input:active, input:focus {
 .logo-large {
 
 }
-
 main {
-	padding: 35px;
+	z-index: 5;
+	padding: 0 !important;
+	margin: 0;
+}
+nav {
+	z-index: 10;
+}
+.note {
+	text-align: right;
+}
+.row {
+	/*width: 100%;*/
+}
+section {
+	/*padding: 20px;*/
+
 }
 
 .social-media-container-dark a {

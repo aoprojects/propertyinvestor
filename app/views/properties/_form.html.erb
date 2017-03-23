@@ -1,5 +1,7 @@
 <section id="property-form">
-	<small class="note">We are currently only adding properties located in the US. <br>Stay tuned... Our programming team is working to add more locations.</small>
+	<p>
+		<small class="note">We are currently only adding properties located in the US. <br>Stay tuned... Our programming team is working to add more locations.</small>
+	</p>
 
 	<%= form_for(@property) do |p| %>
 		<!-- begin if any property errors -->
@@ -15,7 +17,7 @@
 							<%= p.label :Deal_title %>
 						</span>
 						<span class="field-input-area">
-							<%= p.text_field :deal_title, class: 'form-control', placeholder: "eg. Wholesale deal Seattle - 45k profit" %>
+							<%= p.text_field :deal_title, class: 'form-control', placeholder: "eg. Wholesale deal Seattle - 45k profit", autofocus: true %>
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
 				</div><!-- end .col-sm-6 -->
@@ -107,10 +109,9 @@
 				<div class="col-sm-6 text-center">
 					<div class="field">
 						<span class="field-label">
-							<%= p.label :Off_market %>
-						</span>
-						<span class="field-input-area">
-							<%= p.check_box :off_market, class: 'form-control' %>
+							<%= p.label :Is_this_property_off_market? %>
+						</span>&nbsp;<span class="field-input-area">
+							Yes&nbsp;<%= p.check_box :off_market, class: 'form-control' %>
 							<!-- todo transformt this into only numbers -->
 						</span><!-- end .field-input-area -->
 					</div><!-- end .field -->
