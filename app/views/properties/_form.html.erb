@@ -1,5 +1,5 @@
 <section id="property-form">
-	<small>We are currently only adding properties located in the US. <br>Stay tuned... Our programming team is working to add more locations.</small>
+	<small class="note">We are currently only adding properties located in the US. <br>Stay tuned... Our programming team is working to add more locations.</small>
 
 	<%= form_for(@property) do |p| %>
 		<!-- begin if any property errors -->
@@ -319,7 +319,7 @@
 		</div><!-- end .row -->
 
 		<div class="action-button">
-			<%= p.submit class: 'btn btn-primary btn-lg' %>
+			<%= p.submit class: 'btn btn-success btn-lg' %>
 		</div><!-- end .action-button -->
 
 	<% end %><!-- end form for property -->

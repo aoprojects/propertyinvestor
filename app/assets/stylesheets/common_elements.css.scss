@@ -1,9 +1,57 @@
 /*insert common element styling below*/
+$brand-color: green;
+
+body {
+	font-family: Arial;
+	font-weight: 300;
+}
 
 h1 {
 	text-align: center;
+	font-family: Arial;
+	font-weight: 300;
 }
 
+.field-label {
+	color: $brand-color;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 300px;
+	min-width: 300px;
+	min-width: 20%;
+	/*border-bottom: 1px solid $brand-color;*/
+}
+
+.note {
+	text-align: right;
+}
+
+input {
+	box-shadow: none;
+	padding: 10px;
+	margin: 10px;
+	min-width: 250px;
+	width: 80%;
+	font-size: 16px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid $brand-color;
+}
+
+input:hover, input:active, input:focus {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid $brand-color;
+	box-shadow-top: none;
+	box-shadow-right: none;
+	box-shadow-left: none;
+	box-shadow-bottom: 0 0 5px $brand-color;
+	background: transparent;
+	color: $brand-color;
+	transition: 0.1s ease-in;
+}
 
 .logo-tiny img {
 	max-width: 80px;
@@ -47,4 +95,24 @@ main {
 .social-icon {
 	padding: 15px;
 	font-size: 20px;
+}
+
+textarea {
+	padding: 10px;
+	margin: 15px;
+	width: 100%;
+	min-height: 100px;
+	border-top: none;
+	border-right: none;
+	border-left: 1px solid $brand-color;
+	box-shadow: none;
+}
+textarea:hover, textarea:active, textarea:focus {
+	box-shadow-top: none;
+	box-shadow-right: none;
+	box-shadow-left: 0 0 5px $brand-color;
+	box-shadow-left: 0 0 5px $brand-color;
+	background: transparent;
+	color: $brand-color;
+	transition: 0.1s ease-in;	
 }
