@@ -7,6 +7,12 @@ body {
 	padding: 0;
 	margin: 0;
 }
+button {
+	outline: none;
+}
+button:hover {
+	outline: none;
+}
 h1 {
 	text-align: center;
 	font-family: Arial;
@@ -50,6 +56,7 @@ input:hover, input:active, input:focus {
 	box-shadow-right: none;
 	box-shadow-left: none;
 	box-shadow-bottom: 0 0 5px $brand-color;
+	outline: none;
 	background: transparent;
 	color: $brand-color;
 	transition: 0.1s ease-in;
@@ -132,6 +139,7 @@ textarea:hover, textarea:active, textarea:focus {
 	box-shadow-left: 0 0 5px $brand-color;
 	box-shadow-left: 0 0 5px $brand-color;
 	background: transparent;
+	outline: none;
 	color: $brand-color;
 	transition: 0.1s ease-in;	
 }
