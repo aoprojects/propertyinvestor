@@ -1,1 +1,61 @@
-show.html.erb
+<!-- begi show page for buying criteria -->
+
+<% if @buying_criteria.any? %>
+	<h1>Details for your buying criteria <strong>@buying_criteria.criteria_nickname.capitalize</strong> </h1>
+	<% @buying_criteria.each do |bc| %>
+		<p>
+			<h2><%= bc.criteria_nickname %></h2><br>
+
+			<p><small>This criteria was last updated at <%= bc.created_at %></small></p>
+
+			<div class="buying-criteria-address">
+				<%= bc.address_street_number %>&nbsp;
+				<%= bc.address_street_name %><br>
+				<%= bc.address_unit_number %><br>
+				<%= bc.address_city %>,&nbsp;
+				<%= bc.address_us_state %>&nbsp;
+				<%= bc.address_us_zipcode %><br>
+			</div><!-- end .buying-criteria-address -->
+			<%= bc.off_market %><br>
+			<span class="range">
+				<%= bc.property_finished_sf_min %><br>
+				<%= bc.property_finished_sf_max %>
+			</span><br>
+			<%= bc.property_condition %><br>
+			<%= bc.deal_type %><br>
+			<span class="range">
+				<%= bc.property_current_value_min %>&nbsp;to&nbsp;<%= bc.property_current_value_max %>
+			</span><!-- end .range --><br>	
+			<span class="range">
+				<%= bc.property_estimated_arv_min %>&nbsp;to&nbsp;<%= bc.property_estimated_value_max %>
+			</span><!-- end .range --><br>
+			<span class="range">
+				<%= bc.property_renovations_needed_min %>&nbsp;to &nbsp;<%= bc.property_renovations_needed_max %>
+			</span><!-- end .range --><br>
+			<%= bc.deal_repair_estimate %><br>
+			<%= bc.property_description_keywords %><br>
+			<strong><%= bc.deal_estimated_profit_min %></strong>
+
+		
+			<%= bc.property_features_keywords %><br>
+			<%= bc.under_direct_contract %><br>
+
+			<%= link_to 'Edit This Criteria', edit_buying_criterium_path(@buying_criteria), class: "btn btn-default btn-md" %>
+			
+		</p><!-- end buying criteria paragraph -->
+	<% end %><!-- end buying criteria show details ruby block -->
+	<!-- this should show all matches in addition to all buying criteria -->
+	<%= link_to 'View All Matches', buying_criterium_path, class: "btn btn-success btn-lg" %>
+
+<% else %>
+	<h1>You haven't told us what you like to buy.</h1>
+<% end %><!-- end if any buying criterial ruby block -->
+
+<%= link_to 'New Buying Criteria', new_buying_criterium_path, class: "btn btn-default btn-md" %>
+
+<button>Browse recently updated properties.</button>
+
+<!-- edit email and in-app alert settings for matches -->
+<%= link_to 'My Alert Settings', my_account_path, class: "btn btn-default btn-md" %>
+
+

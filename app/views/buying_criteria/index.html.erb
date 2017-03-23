@@ -1,9 +1,45 @@
-<h1>All Your Buying Criteria</h1>
+<div class="row">
+	<div id="matches-index" class="col-md-6">
+		<h1>Matches based on your buying criteria:</h1>
 
-<p>Your buying criteria [ruby block todo]</p>
+		<% if @property_match.any? %>
+		<!-- todo insert matches -->
+		<% end %>
+		<!-- end if any buying matches present -->
 
-<button>New Criteria</button>
-<button>Edit List</button>
---
-<button>My Account</button>
-<button>New Property</button>
+	</div><!-- end .col-md-6 #matches-index-->
+	<div id="buying-criterium-index" class="col-md-6">
+		<h1>All Your Buying Criteria:</h1>
+
+
+		<% if @buying_criteria.any? %>
+			<h1>Details for your buying criteria <strong>@buying_criteria.criteria_nickname.capitalize</strong></h1>
+			<% @buying_criteria.each do |bc| %>
+				<p>
+					<h2><%= bc.criteria_nickname %></h2><br>
+					<!-- todo add more buying criteria info -->
+				</p><!-- end buying criteria paragraph -->
+			<% end %><!-- end buying criteria show details ruby block -->
+			<%= link_to 'Edit This Criteria', edit_buying_criterium_path, class: "btn btn-default btn-md" %>
+			<!-- this should show all matches in addition to all buying criteria -->
+			<%= link_to 'View All Matches', buying_criterium_path, class: "btn btn-success btn-lg" %>
+
+		<% else %>
+			<h1>You haven't told us what you like to buy.</h1>
+		<% end %><!-- end if any buying criterial ruby block -->
+
+		<%= link_to 'New Buying Criteria', new_buying_criterium_path, class: "btn btn-default btn-md" %>
+
+		<!-- edit email and in-app alert settings for matches -->
+		<%= link_to 'My Alert Settings', my_account_path, class: "btn btn-default btn-md" %>
+
+	</div><!-- end .col-md-6 #buying-criterium-index-->
+</div><!-- end .row -->
+
+
+
+		<button>New Criteria</button>
+		<button>Edit List</button>
+		--
+		<button>My Account</button>
+		<button>New Property</button>
