@@ -1,6 +1,14 @@
 /*insert common element styling below*/
 $brand-color: green;
 
+a {
+	color: $brand-color;
+	text-decoration: none;
+}
+a:hover {
+	color: lighten($brand-color, 20%);
+}
+
 body {
 	font-family: Arial;
 	font-weight: 300;
