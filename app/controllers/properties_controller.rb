@@ -43,10 +43,10 @@ class PropertiesController < ApplicationController
 
 private
 	def property_params
-		property_params = Property.require(:property).permit(:address_unit, :address_street, :address_city, :address_us_state, :address_us_zipcode, :property_finished_sf, :property_land_sf, :property_condition, :deal_type, :deal_urgency, :proeprty_current_value, :property_estimated_arv, :proeprty_renovations_needed, :deal_repair_estimate, :property_description, :deal_additional_details, :off_market)
+		params.require(:property).permit(:address_unit, :address_street, :address_city, :address_us_state, :address_us_zipcode, :property_finished_sf, :property_land_sf, :property_condition, :deal_type, :deal_urgency, :proeprty_current_value, :property_estimated_arv, :proeprty_renovations_needed, :deal_repair_estimate, :property_description, :deal_additional_details, :off_market)
 	end
 
 	def find_property
-		@property = Property.find_by(params[:id])
+		@property = Property.find(params[:id])
 	end
 end

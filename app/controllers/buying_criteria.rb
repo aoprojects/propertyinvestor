@@ -1,6 +1,5 @@
 class BuyingCriteriaController < ApplicationController
-	before_action :find_buying_criteria, only: [:edit, :udpate, :destroy]
-
+	before_action :find_buying_criteria, only: [:edit, :update, :destroy]
 
 	def index
 		@buying_criteria = BuyingCriteria.all
@@ -14,7 +13,7 @@ class BuyingCriteriaController < ApplicationController
 	end
 
 	def new
-		@buying_criteria = BuyingCriteria.all
+		# @buying_criteria = BuyingCriteria.all
 		@new_buying_criterium = BuyingCriterium.new
 	end
 
