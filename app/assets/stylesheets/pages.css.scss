@@ -1,6 +1,15 @@
 /*stylesheet for actions under the pages controller*/
 $brand-color: green;
 
+#pages-index {
+	section {
+		padding: 40px;
+	}
+	section:nth-child(2n) {
+		background-color: #eee;
+	}
+}
+
 #faq-section {
 	padding: 40px;
 	.answer {
