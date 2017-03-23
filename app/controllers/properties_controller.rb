@@ -2,10 +2,11 @@ class PropertiesController < ApplicationController
 	before_action :find_property, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@properties = Property.all
+		@properties = Properties.all
 	end
 
 	def show
+		@property = Property.find_by(property_params)
 		# we shouldn't need anything here because the before action is finding the post
 	end
 
@@ -42,10 +43,10 @@ class PropertiesController < ApplicationController
 
 private
 	def property_params
-		params.require(:property).permit(:address_unit, :address_street, :address_city, :address_us_state, :address_us_zipcode, :property_finished_sf, :property_land_sf, :property_condition, :deal_type, :deal_urgency, :proeprty_current_value, :property_estimated_arv, :proeprty_renovations_needed, :deal_repair_estimate, :property_description, :deal_additional_details, :off_market)
+		property_params = Property.require(:property).permit(:address_unit, :address_street, :address_city, :address_us_state, :address_us_zipcode, :property_finished_sf, :property_land_sf, :property_condition, :deal_type, :deal_urgency, :proeprty_current_value, :property_estimated_arv, :proeprty_renovations_needed, :deal_repair_estimate, :property_description, :deal_additional_details, :off_market)
 	end
 
 	def find_property
-		@property = Property.find(params[:id])
+		@property = Property.find_by(params[:id])
 	end
 end
