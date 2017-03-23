@@ -6,25 +6,26 @@
 	<h1>Welcome, <%= current_user.name %>.<br>
 	You have [insert #alerts and messages].</h1>
 <% else %> 
-<h1>Welcome to Property Investor.</h1><br>
+<h1>Welcome to Property Investor.</h1>
+<h4>It's a beautiful day to buy properties.</h4>
+<br>
 	<h4>
 		<%= link_to 'Search Properties Immediately', buying_criteria_path, class: 'btn btn-default' %> or <%= link_to 'Access Your Account', my_account_path, class: 'btn btn-default btn-md' %> to view your matches.
 	</h4>
 <% end %>
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<section id="root-matches">
-			<h2>You have [todo # of new matches] new matches.</h2>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+			<% if user_signed_in? %>
+				<h2>You have [todo # of new matches] new matches.</h2>
+				<p>List matches here in a ruby block with summaries of matches.</p>
+			<% else %>
+				<h2>How we match buyers with properties:</h2>
+				<p>TODO explanation of how the app works.</p>
+				<%= link_to 'Search Properties', new_buying_criterium_path %> TODO Input field here.
+			<% end %>
 		</section><!-- end #root-matches -->
-	</div><!-- end .col-md-12 -->
+	</div><!-- end .col-md-6 -->
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<section id="root-post-property">
 			<h2>Advertise a Property</h2>
@@ -42,22 +43,25 @@
 			</div><!-- end button -->
 		</section><!-- end #root-post-properties -->
 	</div><!-- end .col-md-6 -->
-	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-		<section id="root-search-properties">
+	<% if user_signed_in? %>
+	<!-- this will show only if user is signed in -->
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<section id="root-search-properties">
 
-			<h2>Find properties</h2>
+				<h2>Find properties</h2>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<div class="text-center">
-				<%= link_to 'Find Properties', buying_criteria_path, class: "btn btn-default btn-md" %>
-			</div><!-- end button -->
-		</section><!-- end #root-search-properties -->
-	</div><!-- end .col-md-6 -->
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<div class="text-center">
+					<%= link_to 'Find Properties', buying_criteria_path, class: "btn btn-default btn-md" %>
+				</div><!-- end button -->
+			</section><!-- end #root-search-properties -->
+		</div><!-- end .col-md-6 -->
+	<% end %><!-- end show only if user is signed in -->
 
 </div><!-- end .row -->
