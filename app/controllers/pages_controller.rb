@@ -17,4 +17,7 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def customer_input
+  end
+
 end

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "contact" => "pages#contact"
   get "my_account" => "pages#my_account"
   get "new_data_choice" => "pages#new_data_choice"
+  get "customer_input" => "pages#customer_input"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
