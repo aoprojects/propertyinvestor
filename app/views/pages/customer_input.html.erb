@@ -4,13 +4,31 @@
 
 [begin form]
 
-<input>
+<% if !user_signed_in? %>
+	Your Name
+	<input>
 
-<input>
+	Your Email address
+	<input>
+<% else %>
+	<%= current_user.name %><br>
+	<%= current_user.email %>
+<% end %>
 
-<input>
+Subject: 
+<p>What is your general goal?</p>
+[checkbox] Something went wrong<br>
+[ckeckbox] I feel confused<br>
+[checkbox] I have an idea for a new feature<br>
+[checkbox] Collaborate with us<br>
+[other] ________<br>
 
-<input>
+Message body:
+<textarea>
 
+<button>Send It!</button>
 
-<button>
+	Thank you very much for helping to make Property Investor a better product.<br>We respect your input and take your ideas seriously.
+
+<%= link_to 'Back', ___ %><br>
+<%= link_to 'Keep Working on Your Portfolio', root_path %>
