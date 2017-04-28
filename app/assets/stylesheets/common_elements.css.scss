@@ -15,6 +15,8 @@ body {
 	padding: 0;
 	margin: 0;
 }
+/* remove ugly default browser styling */
+
 button {
 	outline: none;
 }
@@ -36,45 +38,7 @@ h3 {
 h4, h5, h6 {
 	text-align: center;
 }
-.field-label {
-	color: $brand-color;
-	padding: 10px;
-	font-size: 18px;
-	font-weight: 300px;
-	min-width: 300px;
-	min-width: 20%;
-	/*border-bottom: 1px solid $brand-color;*/
-}
 
-input {
-	text-align: center;
-	box-shadow: none;
-	padding: 10px;
-	margin: 10px;
-	min-width: 250px;
-	width: 80%;
-	font-size: 16px;
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid $brand-color;
-	background: transparent;
-}
-
-input:hover, input:active, input:focus {
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid $brand-color;
-	box-shadow-top: none;
-	box-shadow-right: none;
-	box-shadow-left: none;
-	box-shadow-bottom: 0 0 5px $brand-color;
-	outline: none;
-	background: transparent;
-	color: $brand-color;
-	transition: 0.1s ease-in;
-}
 label:after {
 	content: ":";
 }
@@ -96,6 +60,9 @@ main {
 	z-index: 5;
 	padding: 30px 0 30px 0 !important;
 	margin: 0;
+	section {
+		z-index: 5;
+	}
 }
 nav {
 	z-index: 10;
@@ -137,6 +104,81 @@ section {
 	font-size: 20px;
 }
 
+/* styling for forms */
+
+
+/* for form fields */
+.field-label {
+	color: $brand-color;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 300px;
+	min-width: 300px;
+	min-width: 20%;
+	/*border-bottom: 1px solid $brand-color;*/
+}
+/* form styling, for common inputs that are not buttons/of type="submit" */
+input[type="text"], input[type="checkbox"] {
+	text-align: left;
+	box-shadow: none;
+	padding: 10px;
+	margin: 10px;
+	min-width: 250px;
+	width: 100%;
+	font-size: 16px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid $brand-color;
+	background: transparent;
+}
+input[type="number"] {
+	text-align: left;
+	box-shadow: none;
+	padding: 10px;
+	margin: 10px;
+	min-width: 250px;
+	width: 100%;
+	font-size: 16px;
+	border: 1px solid $brand-color;
+	border-radius: 0px;
+	background: transparent;
+}
+input[type="number"]:hover, input[type="number"]:active, input[type="number"]:focus {
+	border: 1px solid $brand-color;
+	box-shadow: 0 0 5px $brand-color;
+	outline: none;
+	background: transparent;
+	color: $brand-color;
+	transition: 0.1s ease-in;
+}
+
+input[type="text"]:hover, input[type="checkbox"]:hover, 
+input[type="text"]:active, input[type="checkbox"]:active, 
+input[type="text"]:focus, input[type="checkbox"]:focus {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid $brand-color;
+	box-shadow-top: none;
+	box-shadow-right: none;
+	box-shadow-left: none;
+	box-shadow-bottom: 0 0 5px $brand-color;
+	outline: none;
+	background: transparent;
+	color: $brand-color;
+	transition: 0.1s ease-in;
+}
+input.submit-button {
+	color: $brand-color;
+	border-radius: 0px;
+	padding: 15px;
+	height: 40px;
+	margin: 0 auto;
+	text-align: center;
+}
+/*todo style the submit button */
+
 textarea {
 	padding: 10px;
 	margin: 15px;
@@ -146,6 +188,7 @@ textarea {
 	border-right: none;
 	border-left: 1px solid $brand-color;
 	box-shadow: none;
+	background: transparent;
 }
 textarea:hover, textarea:active, textarea:focus {
 	box-shadow-top: none;
@@ -157,3 +200,4 @@ textarea:hover, textarea:active, textarea:focus {
 	color: $brand-color;
 	transition: 0.1s ease-in;	
 }
+

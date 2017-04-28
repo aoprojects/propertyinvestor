@@ -1,5 +1,18 @@
 
 
+/* proeprties pages */
+#properties-new {
+	width: 100%;
+}
+
+#property-form {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+
+/* other property styles */
+
 .property-preview {
 	border: 1px solid red;
 	padding: 20px;
@@ -22,14 +35,14 @@
 
 }
 
-#property-form {
+#properties-new {
 	width: 100%;
 	section {
 		/*border: 1px solid red;*/
 		padding: 20px;
 		width: 100%;
 	}
-	section:nth-child(2n) {
-		background-color: #eee;
+	section:nth-child(2n +1) {
+		/*background-color: #eee;*/
 	}
 }
