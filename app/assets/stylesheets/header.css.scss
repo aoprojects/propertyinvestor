@@ -60,12 +60,21 @@ nav #nav-logo {
 }
 nav #nav-brand-text {
 	color: white;
-	font-weight: 300;
-	font-family: 'Lato', sans-serif;
-	font-size: 26px;
+	font-weight: 200 !important;
+	font-family: 'Exo', sans-serif;
+	font-size: 30px;
 	position: fixed;
-	left: 100px;
-	top: 40px;
+	left: 80px;
+	top: 35px;
+}
+@media only screen and (max-width: 529px) {
+	nav #nav-brand-text {
+		position: inherit;
+		margin: 0 auto;
+		font-size: 25px;
+		transition: ease-in 0.5s;
+		transition: ease-out 0.5s;
+	}
 }
 /* click this to drop down nav on tablet and mobile sizes */
 nav ul {
