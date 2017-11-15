@@ -23,4 +23,7 @@ class PagesController < ApplicationController
   def buying_criteria_manual
   end
 
+  def new_property_manual
+  end
+
 end
