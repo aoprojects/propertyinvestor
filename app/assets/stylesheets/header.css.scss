@@ -52,6 +52,12 @@ nav #xs_hamburger:hover {
 	cursor: pointer;
 	color: rgba(229,137,0,1.0);
 }
+nav #nav-logo {
+	max-height: 60px;
+	position: fixed;
+	left: 10px;
+	top: 12px;
+}
 /* click this to drop down nav on tablet and mobile sizes */
 nav ul {
 	padding-top: 25px;
@@ -89,7 +95,7 @@ nav ul li a:hover {
 		position: fixed;
 		top: 100px;
 		left: 0px;
-		height: 190px;
+		height: 100px;
 		padding-bottom: 10px;
 		background-color: $gray-background;
 		ul {
@@ -107,7 +113,7 @@ nav ul li a:hover {
 	}
 	.adjusted_down {
 		position: relative;
-		top: 280px;
+		top: 120px;
 		transition: ease 0.5s;
 	}
 }// to hide nav menu items on tablet and mobile sizes
