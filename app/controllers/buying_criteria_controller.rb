@@ -2,7 +2,7 @@ class BuyingCriteriaController < ApplicationController
 	before_action :find_buying_criteria, only: [:edit, :update, :destroy]
 
 	def index
-		@buying_criteria = BuyingCriteria.all
+		# @buying_criteria = BuyingCriteria.all
 		@property_matches
 	end
 

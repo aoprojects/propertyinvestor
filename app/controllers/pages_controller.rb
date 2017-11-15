@@ -20,4 +20,7 @@ class PagesController < ApplicationController
   def customer_input
   end
 
+  def buying_criteria_manual
+  end
+
 end
