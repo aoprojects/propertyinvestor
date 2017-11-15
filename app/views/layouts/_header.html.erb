@@ -1,30 +1,26 @@
 
 <header>
-	<div class="container">
-
-		<p id="nav-brand">
-			<%= link_to root_path do %>
-				<%= image_tag('Property-Investor-Logo-white.png', id: "logo-nav") %>
-				&nbsp;<span id="brand">Property&nbsp;Investor</span>
-			<% end %>
-		</p>
-		<div id="hamburger">
-			<%= fa_icon "bars" %>
-		</div><!-- end #hamburger -->
-
-		<nav id="main-navigation">
-			<ul>
-				<li><%= link_to 'Post a Property', new_property_path %></li>
-				<li><%= link_to 'Search Properties', buying_criteria_path %></li>
-				<% if user_signed_in? %>
-					<li><%= link_to 'My Account', my_account_path %></li>
-					<li><%= link_to 'Sign Out', destroy_user_session_path %></li>
-				<% else %>
-					<li><%= link_to 'My Account', new_user_registration_path %></li>
-				<% end %>
-			</ul>
-		</nav>
-
-	</div><!-- end .container -->
-	
+	<nav>
+	    <h1>
+	        <%= link_to root_path do %>
+	            <!-- displays on larger screen sizes -->
+	            <%= image_tag('Property-investor-Logo-white.png') %>
+	            <!-- displays on smaller screen sizes -->
+	            
+	            <p class="hidden orange">PropertyInvestor.io</p>
+	        <% end %>
+	    </h1>
+	    <div id="xs_hamburger">
+	        <div id="hamburger_icon">
+	            <%= image_tag("list-menu.png") %>
+	        </div>
+	        <div id="menu_label">Menu</div>
+	    </div>
+	    <div id="nav_elements">
+	        <ul>
+	            <li><%= link_to "Properties", root_path %></li>
+	            <li><%= link_to "Contact", contact_path %></li>
+	        </ul>
+	    </div>
+	</nav>
 </header>

@@ -65,44 +65,6 @@ h4, h5, h6 {
 	text-align: center;
 }
 
-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	padding: 5px 15px;
-	overflow: hidden;
-	height: 50px;
-	background: #303030;
-	color: #ddd;
-	width: 100%;
-	#brand {
-		max-width: 100px;
-		font-size: 24px;
-	}
-	a {
-		color: #ddd;
-		text-decoration: none;
-	}
-	a:hover {
-		color: white;
-	}
-	#hamburger {
-		display: none;
-	}
-	#main-navigation {
-		position: fixed;
-		top: 0;
-		right: 0;
-		ul li {
-			list-style: none;
-			float: left;
-			padding: 10px;
-		}
-		ul li:hover {
-			color: white;
-		}
-	} /* end #main-navigation all screen sizes */
-}
 
 label:after {
 	content: ":";
@@ -133,9 +95,6 @@ main {
 	}
 }
 
-nav {
-	z-index: 10;
-}
 .note {
 	text-align: right;
 }
@@ -153,152 +112,7 @@ section {
 	list-style: none;
 }
 
-/*below is to get main navigation to collapse on all screen sizes*/
-@media only screen and (max-width: 767px) {
-	#main-navigation {
-		#brand {
-
-		}
-		position: fixed !important;
-		#hamburger {
-			display: inline-block;
-			position: fixed;
-			top: 0;
-			right: 0;
-			padding: 30px;
-			color: #ddd;
-			z-index: 12;
-		}
-		ul {
-			position: fixed;
-			right: 0;
-			top: 70;
-			width: 100%;
-			li {
-				display: inline;
-				width: 100%;
-				color: #ddd;
-				text-align: right;
-				background: #303030;			
-			}
-		}
-	}
-}
-
-// below is for nav brand area on upper left of nav, links to root_path
-#nav-brand {
-	#brand {
-		position: relative;
-		top: -25px;
-		left: 0px;
-	}
-	#logo-nav {
-		position: relative;
-		top: -14px;
-		left: -2px;
-		max-width: 45px;
-	}
-}
-
 .social-icon {
 	padding: 15px;
 	font-size: 20px;
 }
-
-/* styling for forms */
-
-
-/* for form fields */
-.field-label {
-	color: $brand-color;
-	padding: 10px;
-	font-size: 18px;
-	font-weight: 300px;
-	min-width: 300px;
-	min-width: 20%;
-	/*border-bottom: 1px solid $brand-color;*/
-}
-/* form styling, for common inputs that are not buttons/of type="submit" */
-input[type="text"], input[type="checkbox"] {
-	text-align: left;
-	box-shadow: none;
-	padding: 10px;
-	margin: 10px;
-	min-width: 250px;
-	width: 100%;
-	font-size: 16px;
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid $brand-color;
-	background: transparent;
-}
-input[type="number"] {
-	text-align: left;
-	box-shadow: none;
-	padding: 10px;
-	margin: 10px;
-	min-width: 250px;
-	width: 100%;
-	font-size: 16px;
-	border: 1px solid $brand-color;
-	border-radius: 0px;
-	background: transparent;
-}
-input[type="number"]:hover, input[type="number"]:active, input[type="number"]:focus {
-	border: 1px solid $brand-color;
-	box-shadow: 0 0 5px $brand-color;
-	outline: none;
-	background: transparent;
-	color: $brand-color;
-	transition: 0.1s ease-in;
-}
-
-input[type="text"]:hover, input[type="checkbox"]:hover, 
-input[type="text"]:active, input[type="checkbox"]:active, 
-input[type="text"]:focus, input[type="checkbox"]:focus {
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid $brand-color;
-	box-shadow-top: none;
-	box-shadow-right: none;
-	box-shadow-left: none;
-	box-shadow-bottom: 0 0 5px $brand-color;
-	outline: none;
-	background: transparent;
-	color: $brand-color;
-	transition: 0.1s ease-in;
-}
-input.submit-button {
-	color: $brand-color;
-	border-radius: 0px;
-	padding: 15px;
-	height: 40px;
-	margin: 0 auto;
-	text-align: center;
-}
-/*todo style the submit button */
-
-textarea {
-	padding: 10px;
-	margin: 15px;
-	width: 100%;
-	min-height: 100px;
-	border-top: none;
-	border-right: none;
-	border-left: 1px solid $brand-color;
-	box-shadow: none;
-	background: transparent;
-}
-textarea:hover, textarea:active, textarea:focus {
-	box-shadow-top: none;
-	box-shadow-right: none;
-	box-shadow-left: 0 0 5px $brand-color;
-	box-shadow-left: 0 0 5px $brand-color;
-	background: transparent;
-	outline: none;
-	color: $brand-color;
-	transition: 0.1s ease-in;	
-}
-

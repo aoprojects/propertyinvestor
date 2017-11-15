@@ -88,6 +88,39 @@
 	</div><!-- end .row -->
 </footer>
 <!-- END OLD FOOTER CODE -->
+<!-- BEGIN OLD HEADER AREA -->
+<header>
+	<div class="container">
+
+		<p id="nav-brand">
+			<%= link_to root_path do %>
+				<%= image_tag('Property-Investor-Logo-white.png', id: "logo-nav") %>
+				&nbsp;<span id="brand">Property&nbsp;Investor</span>
+			<% end %>
+		</p>
+		<div id="hamburger">
+			<%= fa_icon "bars" %>
+		</div><!-- end #hamburger -->
+
+		<nav id="main-navigation">
+			<ul>
+				<li><%= link_to 'Post a Property', new_property_path %></li>
+				<li><%= link_to 'Search Properties', buying_criteria_path %></li>
+				<% if user_signed_in? %>
+					<li><%= link_to 'My Account', my_account_path %></li>
+					<li><%= link_to 'Sign Out', destroy_user_session_path %></li>
+				<% else %>
+					<li><%= link_to 'My Account', new_user_registration_path %></li>
+				<% end %>
+			</ul>
+		</nav>
+
+	</div><!-- end .container -->
+	
+</header>
+<!-- END OLD HEADER AREA -->
+
+
 
 
 

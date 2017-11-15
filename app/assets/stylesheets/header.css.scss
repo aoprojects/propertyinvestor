@@ -1,0 +1,141 @@
+/* NAVIGATION */
+/*begin default styles for all NAVIGATION sizes*/
+$gray-background: rgba(63,67,64,1.0);
+$dark-purple: #4c3257;
+$orange: rgba(255,153,0,1.0);
+$gray-text: #aaa;
+
+nav {
+	position: fixed;
+	background-color: rgba(63,67,64,1.0); /*dark gray*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #jjj;
+	padding: 20px;
+	min-height: 100px;
+	z-index: 20;
+	background-color: $gray-background;
+}
+nav #brand-text {
+	color: #eee;
+	padding-left: 40px;
+	padding-top: 0px;
+	font-size: 25px;
+	display: none;
+}// was using this for the nav area text logo. Not really anymore.
+nav #nav-logo-single-row {
+	display: inline;
+	position: fixed;
+	top: 0px;
+	left: 30px;
+	max-height: 100px;
+	max-width: 50vw; // will get smaller when viewport is 800px wide or smaller, since logo file is 400px wide and is restricted to max half of width
+}
+nav #nav-logo-double-row {
+	display: inline;
+	position: fixed;
+	top: -25px;
+	left: 15px;
+	max-height: 160px;
+}
+nav #xs_hamburger {
+	color: #eee;
+	font-size: 25px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 21px;
+}
+nav #xs_hamburger:hover {
+	background-color: #525153;
+	cursor: pointer;
+	color: rgba(229,137,0,1.0);
+}
+/* click this to drop down nav on tablet and mobile sizes */
+nav ul {
+	padding-top: 25px;
+}
+nav ul li {
+	list-style: none;
+}
+nav ul li:hover {
+	text-decoration: none;
+	cursor: pointer;
+	color: $orange;
+	/*background-color: black;*/
+}
+nav ul li a {
+	text-decoration: none;
+	color: #eee;
+}
+nav ul li a:hover {
+	text-decoration: none;
+}
+#xs_hamburger #hamburger_icon {
+
+}
+#xs_hamburger #menu_label {
+	display: block;
+	font-size: 13px;
+	color: white;
+}
+
+/* NAVIGATION styles for mobile and tablets below */
+@media only screen and (max-width: 991px) {
+	#nav_elements {
+		display: none;
+		width: 100vw;
+		position: fixed;
+		top: 100px;
+		left: 0px;
+		height: 190px;
+		padding-bottom: 10px;
+		background-color: $gray-background;
+		ul {
+			padding-left: 0;
+		}
+		li {
+			text-align: center;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 0;
+		}
+	}
+	main {
+		position: relative;
+	}
+	.adjusted_down {
+		position: relative;
+		top: 280px;
+		transition: ease 0.5s;
+	}
+}// to hide nav menu items on tablet and mobile sizes
+
+/* Begin NAVIGATION styles for desktop and larger below */
+@media only screen and (min-width: 992px) {
+	/*begin styling for navigation*/
+	nav ul {
+		position: fixed;
+		right: 0;
+		top:0;
+		// width is 70vw when 8 nav elements total, instead of 6
+		/*top: 0;*/
+	}
+	nav ul li {
+		float: left;
+		position: relative;
+		padding: 15px;
+		height: 30px;
+	}
+	#xs_hamburger {
+		display: none;
+	}
+	#nav_elements {
+		display: inline !important;
+	}// nav elements will appear in two rows, within main desktop nav row, on larger screens
+
+	/*end styling for navigation*/
+}/*display for desktop screens only*/
+
+/* END NAVIGATION DEFAULT STYLES */
