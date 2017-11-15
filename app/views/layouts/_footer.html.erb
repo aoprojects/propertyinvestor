@@ -1,26 +1,14 @@
 <footer>
 	<div class="row">
-		<div class="col-md-6">
 
-		</div>
-		<div class="col-md-6">
+		<div class="col-md-12">
 			<p class="logo-tiny"><%= image_tag('Property-Investor-Logo-white.png') %></p>
 			<p><%= link_to 'PropertyInvestor.io', root_path %></p>
-			<p><%= render 'layouts/social_media_content' %></p>
+			<p><%= link_to 'Input or Search for Properties', root_path %></p>
 			<p><%= link_to 'Contact Us', contact_path %></p>
 			<p><%= link_to "Give Feedback", customer_input_path %></p>
-			<p><%= link_to 'FAQ', faq_path %></p>
-			<p><%= link_to 'Privacy & Terms', privacy_path %></p>
 		</div>
-		<div class="col-md-6">
-			<% if user_signed_in? %>
-				<%= link_to 'My Account', my_account_path %><br>
-				<%= link_to 'Sign Out', destroy_user_session_path %><br>
-			<% else %>
-				<%= link_to 'My Account', new_user_registration_path %>
-			<% end %>
 
-		</div>
 	</div><!-- end .row -->
 </footer>
 
